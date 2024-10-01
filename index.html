@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Whisper</title>
+    <!-- Link to the external CSS file for custom styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- Link to the Font Awesome library for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar at the top of the page -->
+    <nav>
+        <div class="nav-left">
+            <!-- Website logo -->
+            <img src="images/Logo.png" alt="Website Logo" class="logo">
+            <!-- Website name displayed next to the logo -->
+            <span class="website-name">Wisdom Whisper</span>
+        </div>
+        <div class="nav-right">
+            <!-- Links to navigate between different pages: Favorites, Your Quotes, Library -->
+            <a href="favorites.html">Favorites</a>
+            <a href="your-quotes.html">Your Quotes</a>
+            <a href="library.html">Library</a>
+        </div>
+    </nav>
+    
+    <!-- Form for interacting with the quote display -->
+    <form id="quote-form" onsubmit="return false;">
+        <!-- Placeholder for displaying the selected quote -->
+        <div id="quote">Select a category and click the button to see a quote!</div>
+        
+        <!-- Container for form controls -->
+        <div class="form-controls">
+            <!-- Dropdown to filter quotes by category -->
+            <select id="category-filter">
+                <option value="">Select a Category</option>
+                <option value="Inspirational Quotes">Inspirational Quotes</option>
+                <option value="Love Quotes">Love Quotes</option>
+                <option value="Life Quotes">Life Quotes</option>
+                <option value="Friendship Quotes">Friendship Quotes</option>
+                <option value="Humorous Quotes">Humorous Quotes</option>
+                <option value="Philosophical Quotes">Philosophical Quotes</option>
+                <option value="Motivational Quotes">Motivational Quotes</option>
+                <option value="Success Quotes">Success Quotes</option>
+                <option value="Wisdom Quotes">Wisdom Quotes</option>
+                <option value="Sad Quotes">Sad Quotes</option>
+                <option value="Positive Quotes">Positive Quotes</option>
+                <option value="Famous Quotes">Famous Quotes</option>
+                <option value="Religious/Spiritual Quotes">Religious/Spiritual Quotes</option>
+                <option value="Leadership Quotes">Leadership Quotes</option>
+                <option value="Historical Quotes">Historical Quotes</option>
+                <option value="Educational Quotes">Educational Quotes</option>
+                <option value="Cultural Quotes">Cultural Quotes</option>
+                <option value="Environmental Quotes">Environmental Quotes</option>
+                <option value="Political Quotes">Political Quotes</option>
+                <option value="Family Quotes">Family Quotes</option>
+                <option value="Anime Quotes">Anime Quotes</option>
+            </select>
+            
+            <!-- Group of buttons for various actions -->
+            <div class="button-group">
+                <!-- Button to display a quote based on the selected category -->
+                <button id="show-quote-button" type="button" onclick="displayQuote()">Show Quote</button>
+                <!-- Button to copy the displayed quote to clipboard -->
+                <button id="copy-button" type="button" onclick="copyQuote()" disabled>
+                    <i class="fas fa-copy"></i>
+                </button>                
+                <!-- Button to read the displayed quote aloud using Web Speech API -->
+                <button id="read-aloud-button" type="button" onclick="readAloud()" disabled>
+                    <i class="fas fa-volume-up"></i>
+                </button>                               
+                <!-- Button to like the displayed quote, adding it to favorites -->
+                <button id="like-button" type="button" onclick="likeQuote()" disabled>
+                    <i class="fas fa-heart-broken"></i>
+                </button>                
+            </div>
+        </div>
+    </form>    
+
+    <!-- Link to the external JavaScript file for handling the functionality -->
+    <script src="js/script.js"></script>
+</body>
+</html>

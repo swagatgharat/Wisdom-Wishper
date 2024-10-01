@@ -1,0 +1,178 @@
+/* Common styles for the your-quotes page */
+
+/* Font definitions for the page */
+@font-face {
+    font-family: 'Olive & Citrus DEMO';
+    src: url('styles\Olive-Citrus-DEMO-BF64b00c1680767.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bigrock';
+    src: url('styles\Bigrock.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Page-specific styles */
+body {
+    font-family: 'Bigrock';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Navigation bar styling */
+/* Flexbox layout for the navigation bar with centered content and background color */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #76c1c4;
+    color: #ecf0f1;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side of the nav bar containing the logo and website name */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the logo in the navigation bar */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Styling for the website name in the navigation bar */
+.website-name {
+    margin-top: 10px;
+    font-family: 'Olive & Citrus DEMO';
+    font-size: 25px;
+    font-weight: 1000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
+}
+
+/* Right side of the nav bar containing the navigation links */
+.nav-right a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the navigation links */
+.nav-right a:hover {
+    color: black;
+}
+
+/* Page title styling */
+.page-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
+
+/* Form styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Label styling */
+label {
+    font-family: 'Bigrock';
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input and textarea styling */
+textarea, input {
+    font-family: 'Bigrock';
+    width: 100%;
+    max-width: 570px; 
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state styling for inputs and textareas */
+textarea:focus, input:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Textarea specific styling */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    margin-left: 197px;
+    font-family: 'Bigrock';
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #76c1c4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the submit button */
+button[type="submit"]:hover {
+    background-color: #0da1a6;
+    transform: scale(1.05);
+}
+
+/* Disabled button styling */
+button:disabled {
+    cursor: not-allowed;
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* Category select styling */
+select {
+    font-family: 'Bigrock';
+    width: 250px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state styling for the select element */
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+    outline: none;
+}

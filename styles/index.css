@@ -1,0 +1,290 @@
+/* Common styles for the main page */
+
+/* Define custom fonts used across the website */
+@font-face {
+    font-family: 'Olive & Citrus DEMO';
+    src: url('styles\Death Note.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bigrock';
+    src: url('styles\Bigrock.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Keyframe animation for a sound-wave effect, used for the read-aloud button icon */
+@keyframes sound-wave {
+    0% {
+        transform: scaleY(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scaleY(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 0.6;
+    }
+}
+
+/* Page-specific styles */
+/* Global styles for body, setting font, margins, padding, and text color */
+body {
+    font-family: 'Bigrock';
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation bar styling */
+/* Flexbox layout for the navigation bar with centered content and background color */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #76c1c4;
+    color: #ecf0f1;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side of the nav bar containing the logo and website name */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the logo in the navigation bar */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Styling for the website name in the navigation bar */
+.website-name {
+    margin-top: 10px;
+    font-family: 'Olive & Citrus DEMO';
+    font-size: 25px;
+    font-weight: 1000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
+}
+
+/* Right side of the nav bar containing the navigation links */
+.nav-right a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the navigation links */
+.nav-right a:hover {
+    color: black;
+}
+
+/* Title styling for the page */
+.page-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
+
+/* Basic styling for the form container */
+#quote-form {
+    max-width: 700px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the displayed quote within the form */
+#quote {
+    font-family: 'Bigrock';
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+    flex: 1;
+}
+
+/* Styling for the container that holds form controls (dropdown and buttons) */
+.form-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for the select dropdown */
+select {
+    font-family: 'Bigrock';
+    width: 250px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state for the select dropdown */
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Container for the buttons within the form */
+.button-group {
+    margin-bottom: 7px;
+    display: flex;
+    gap: 20px;
+}
+
+/* General styling for buttons within the form */
+button {
+    font-family: 'Bigrock';
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific styling for the "Show Quote" button */
+#show-quote-button {
+    margin-left: 50px;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #76c1c4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the "Show Quote" button */
+#show-quote-button:hover {
+    background-color: #0da1a6;
+    transform: scale(1.05);
+}
+
+/* Disabled state styling for buttons */
+button:disabled {
+    cursor: not-allowed;
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* Specific styling for the "Copy" button */
+#copy-button {
+    background-color: transparent;
+    color: black;
+}
+
+/* Icon styling within the "Copy" button */
+#copy-button i {
+    color: black;
+    font-size: 20px;
+}
+
+/* Disabled and active states for the "Copy" button icon */
+#copy-button:disabled i {
+    color: grey;
+}
+
+#copy-button:active i,
+#copy-button[data-copied='true'] i {
+    color: black;
+}
+
+/* Specific styling for the "Read Aloud" button */
+#read-aloud-button {
+    background-color: transparent;
+    color: black;
+    position: relative;
+}
+
+/* Icon styling within the "Read Aloud" button */
+#read-aloud-button i {
+    color: black;
+    font-size: 20px;
+    display: inline-block;
+    animation: none;
+}
+
+/* Active state with animation for the "Read Aloud" button */
+#read-aloud-button.active i {
+    animation: sound-wave 1s infinite;
+}
+
+/* Disabled and active states for the "Read Aloud" button icon */
+#read-aloud-button:disabled i {
+    color: grey;
+}
+
+#read-aloud-button:active i {
+    color: black;
+}
+
+/* Specific styling for the "Like" button */
+#like-button {
+    background-color: transparent;
+    color: black;
+}
+
+/* Icon styling within the "Like" button */
+#like-button i {
+    color: black;
+    font-size: 20px;
+}
+
+/* Disabled and liked states for the "Like" button icon */
+#like-button:disabled i {
+    color: red;
+}
+
+#like-button .fa-heart-broken {
+    color: red;
+}
+
+#like-button .fa-heart {
+    color: red;
+}
+
+/* General styling for icons within buttons */
+button i {
+    margin: 0;
+}
+
+/* Hover effect for all buttons */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Disabled state for all buttons */
+button:disabled {
+    cursor: not-allowed;
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}

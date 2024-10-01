@@ -1,0 +1,125 @@
+/* Common styles for the library page */
+
+/* Font definitions for the page */
+@font-face {
+    font-family: 'Olive & Citrus DEMO';
+    src: url('styles\Olive-Citrus-DEMO-BF64b00c1680767.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bigrock';
+    src: url('styles\Bigrock.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Page-specific styles */
+body {
+    font-family: 'Bigrock';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Navigation bar styling */
+/* Flexbox layout for the navigation bar with centered content and background color */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #76c1c4;
+    color: #ecf0f1;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side of the nav bar containing the logo and website name */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the logo in the navigation bar */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Styling for the website name in the navigation bar */
+.website-name {
+    margin-top: 10px;
+    font-family: 'Olive & Citrus DEMO';
+    font-size: 25px;
+    font-weight: 1000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
+}
+
+/* Right side of the nav bar containing the navigation links */
+.nav-right a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the navigation links */
+.nav-right a:hover {
+    color: black;
+}
+
+/* Page title styling */
+.page-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
+
+/* Container for the list of quotes in the library */
+#library-list {
+    margin: 20px auto;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* Paragraph styling within the library list */
+#library-list p {
+    margin-left: 22px;
+}
+
+/* Styling for each quote item in the library */
+.favorite-quote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the remove button within each quote item */
+.remove-button {
+    font-family: 'Bigrock';
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 5px 5px;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the remove button */
+.remove-button:hover {
+    transform: scale(1.5);
+    color: #c0392b;
+}
